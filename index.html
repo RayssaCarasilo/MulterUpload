@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdotaAi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <img class="logo" src="icones/logo.png"/>
+    <h1>AdotaAi</h1>
+    <div class=" menu-container">
+        <img class="usuario" src="icones/user.png" alt="Usuário" class="user-icon" onclick="toggleMenu()" />
+        <img class="simbolo" src="icones/pin-de-localizacao.png" />
+        <div class="dropdown" id="userMenu">
+            <div class="tabela">
+                <a href="login.html" target="_self">
+          <button>Login</button>
+                </a>
+          <a href="cadastrar.html" target="_self">
+          <button>Cadastrar</button>
+          </a>
+            </div>
+    </div>
+</nav>
+  <div id="primeira-pagina">
+<main>
+    <h1> AdotaAi</h1>
+
+    <div class="patinhas">
+       <img src="icones/patas.png" alt="patinhas decorativas"/>
+    </div>
+
+    <p>Um website para achar um novo lar para seus bichinhos ou encontrar o bichinho ideal para  você!!
+Crie sua conta agora e já comece a encontrar seu aumigo ideal</p>
+
+
+<button id="botao-comecar"><h1>Comece já</h1></button>
+</main>
+
+
+<div class="circulo" style="background-color: #E673BD; top: 250px; left: 60vw; z-index: 1;">
+<img src="icones/marcio.png" alt="desenho gato preto">  
+</div>
+<div class="circulo" style="background-color: #A1F6DA; top: 200px; left: 65vw;">
+  <img class="cabeca" src="icones/yas.png" alt="desenho chiwawa">
+</div>
+  </div>
+
+
+
+
+<div id="galeria">
+  <h1>Galeria de Bichinhos Disponíveis</h1>
+
+
+  <div id="animais">
+    <!-- Aqui os cards serão adicionados -->
+  </div>
+
+    <button id="filtrar">
+    <img src="icones/filtro.png" alt="Filtro de animais">
+  </button>
+  <div class="filtro" style="display: none;">
+  <section id="filtro-animais">
+    <div class="form-container">
+      <h1>Filtrar Bichinhos</h1>
+      <form id="form-filtro">
+        <div class="left-side">
+          <div class="row">
+            <div class="select-wrapper">
+              <label for="tipo-filtro">Tipo</label>
+              <select id="tipo-filtro" name="tipo">
+                <option value="">Todos</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+                <option value="coelho">Coelho</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <label for="porte-filtro">Porte</label>
+              <select id="porte-filtro" name="porte">
+                <option value="">Todos</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <label for="cidade-filtro">Cidade</label>
+              <select id="cidade-filtro" name="cidade">
+                <option value="">Todas</option>
+                <option value="camboriu">Camboriú</option>
+                <option value="balnearioCamboriu">Balneário Camboriú</option>
+                <option value="itajai">Itajaí</option>
+                <option value="balnearioPicarras">Balneário Piçarras</option>
+                <option value="barraVelha">Barra Velha</option>
+                <option value="bombinhas">Bombinhas</option>
+                <option value="ilhota">Ilhota</option>
+                <option value="itapema">Itapema</option>
+                <option value="navegantes">Navegantes</option>
+                <option value="penha">Penha</option>
+                <option value="portoBelo">Porto Belo</option>
+                <option value="saoJoaoItaperiu">São João do Itaperiú</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit">Aplicar Filtros</button>
+          <button type="button" id="limpar-filtros">Limpar Filtros</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+
+  <button id="adicionar-animal">+</button>
+
+  <div class="adicionar" style="display: none;">
+    <section id="cadastro-bichinho">
+  <div class="form-container">
+    
+    <h1>Um novo lar pro seu bichinho!</h1>
+
+    <form id="animal-form">
+      <div class="left-side">
+        <label for="nome">Nome do bichinho</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <div class="row">
+          <div>
+            <div class="select-wrapper">
+            <label for="porte">Porte</label>
+            <select id="porte" name="porte">
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+            </div>
+          </div>
+          <div>
+            <label for="idade">Idade</label>
+            <input type="text" id="idade" name="idade" maxlength="2" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="select-wrapper">
+          <label for="tipo">Tipo</label>
+              <select id="tipo" name="tipo">
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+              <option value="coelho">Coelho</option>
+          </select>
+          </div>
+           <div>
+            <div class="select-wrapper">
+            <label for="cidade">Cidade</label>
+              <select id="cidade" name="cidade">
+              <option value="camboriu">Camboriú</option>
+              <option value="balnearioCamboriu">Balneário Camboriú</option>
+              <option value="itajai">Itajaí</option>
+              <option value="balnearioPicarras">Balneário Piçarras</option>
+              <option value="barraVelha">Barra Velha</option>
+              <option value="bombinhas">Bombinhas</option>
+              <option value="ilhota">Ilhota</option>
+              <option value="itapema">Itapema</option>
+              <option value="navegantes">Navegantes</option>
+              <option value="penha">Penha</option>
+              <option value="portoBelo">Porto Belo</option>
+              <option value="saoJoaoItaperiu">São João do Itaperiú</option>
+          </select>
+            </div>
+          </div>
+          <div>
+
+            <label for="contato">Telefone para contato</label>
+        <input type="tel" id="contato" name="contato" maxlength="15" placeholder="(00) 00000-0000">
+          </div>
+        </div>
+
+        <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="2" required></textarea>
+
+      </div>
+
+      <div class="right-side">
+        <label>Adicione uma foto do seu bichinho</label>
+        <div class="upload-area">
+          <span>+</span>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+        
+      <button class="submit" type="submit">Adicionar</button>
+      <button type="button" id="botao-limpar">Limpar tudo</button>
+
+      </div>
+    </form>
+  </div>
+</section>
+
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+  
+<script src="script.js"></script>
+</body>
+</html>
