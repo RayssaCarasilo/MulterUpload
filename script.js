@@ -51,7 +51,7 @@ function adicionarAnimalNaGaleria(animal) {
             <p><strong>Cidade:</strong> ${animal.cidade}</p>
             <p><strong>Descrição:</strong> ${animal.descricao}</p>
             <p><strong>Contato:</strong> ${animal.contato}</p>
-            <button onclick="removerAnimal(${animal.id})" class="btn-remover">Remover</button>
+            <button onclick="removerAnimal('${animal.id}')" class="btn-remover">Remover</button>
         </div>
     `;
 
@@ -61,7 +61,7 @@ function adicionarAnimalNaGaleria(animal) {
 // Função para remover animal
 function removerAnimal(id) {
   if (confirm("Tem certeza que deseja remover este animal?")) {
-    animais = animais.filter((animal) => animal.id !== id);
+   animais = animais.filter((animal) => String(animal.id) !== String(id));
     localStorage.setItem("animais", JSON.stringify(animais));
 
     // Recarregar galeria
@@ -69,6 +69,7 @@ function removerAnimal(id) {
     animais.forEach((animal) => adicionarAnimalNaGaleria(animal));
   }
 }
+window.removerAnimal = removerAnimal;
 
 // Função para enviar dados para o servidor
 formulario.addEventListener("submit", async (e) => {
@@ -111,7 +112,7 @@ formulario.addEventListener("submit", async (e) => {
 
   try {
     // Mostrar loading
-    const submitBtn = document.querySelector('button[type="submit"]');
+    const submitBtn = document.getElementById("btn-salvar-animal");
     const originalText = submitBtn.textContent;
     submitBtn.textContent = "Salvando...";
     submitBtn.disabled = true;
