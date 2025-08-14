@@ -7,7 +7,7 @@ const ImageController = require("../controller/imageController");
 
 /*
 router.post();
-router.get("/", ImageController.getAll);
+router.get();
 */
 
 module.exports = router;
