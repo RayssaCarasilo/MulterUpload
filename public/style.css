@@ -1,0 +1,562 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
+  position: relative; 
+}
+
+h1 {
+  color: #000000;
+  font-size: 40px;
+}
+
+p {
+  color: #000000;
+  font-size: 18px;
+}
+
+main {
+  position: absolute;
+  left: 80px;
+}
+
+button {
+  padding: 30px 50px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #a1f6da;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+}
+
+label {
+  font-family: arial;
+  color: #616162;
+}
+
+.container {
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  padding: 10px 20px;
+}
+
+/* css do nav */
+:root {
+  --nav-background: #a1f6da;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--nav-border);
+  background: var(--nav-background);
+  border-radius: 5px;
+  font-size: 3rem;
+  padding: 0.1em;
+  margin: 20px;
+}
+
+nav h1 {
+  color: #000000;
+  font-size: 22px;
+  position: relative;
+  right: 520px;
+}
+
+.simbolo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.usuario {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px); 
+  right: 0;
+  border: 1px solid #a1f6da;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-container {
+  position: relative; 
+}
+
+.tabela {
+  padding: 0px 50px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  margin: 1px 0;
+}
+
+main {
+  width: 50vw; 
+  margin-left: 0; 
+}
+
+main h1 {
+  color: #e673bd;
+  font-size: 70px;
+}
+
+main p {
+  font-size: 25px;
+}
+
+button {
+  background-color: #a1f6da;
+  padding: 0px 15px;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+button h1 {
+  color: #000000;
+  font-size: 42px;
+}
+
+.patinhas {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 40%;
+  top: 85%;
+  transform: rotate(40deg);
+  z-index: 1;
+}
+.patinhas img {
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+}
+
+#botao-comecar {
+  position: absolute;
+  top: 130%;
+  left: 40%;
+}
+.circulo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.circulo img {
+  width: 100%; 
+  height: 80%;
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
+.circulo .cabeca {
+  position: relative;
+  top: -20px; 
+  left: 20px; 
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* TRANSIÇÃO */
+#primeira-pagina {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+#primeira-pagina.fade-out {
+  opacity: 0;
+}
+
+/* GALERIA inicialmente oculta */
+#galeria {
+  display: none;
+  padding: 20px;
+}
+
+/* Exemplo visual para galeria */
+#galeria h1 {
+  font-size: 50px;
+  color: #e673bd;
+}
+
+#animais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.animal-info {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.animal-form {
+  color: #ff66cc;
+}
+
+.animal-card {
+  width: 200px;
+  padding: 10px;
+  background-color: #a1f6da;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.animal-card img {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 8px;
+}
+
+.animal-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.animal-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #312f2f;
+}
+
+.adicionar {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 800px;
+  overflow-y: auto;
+}
+
+#cadastro-bichinho {
+  background-color: white;
+  padding: 40px;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #ff66cc;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.left-side {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 200px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #a1f6da;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+select {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  background-color: #a1f6da;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 14px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.upload-area {
+  width: 200px;
+  height: 200px;
+  background-color: #a1f6da;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 5rem;
+  color: #ff66cc;
+  cursor: pointer;
+}
+
+.upload-area input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #a1f6da;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#adicionar-animal {
+  width: 100px;
+  height: 100px;
+  background-color: #a1f6da;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #ff66cc;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#filtrar {
+  width: 100px;
+  height: 100px;
+  background-color: #a1f6da;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #ff66cc;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 25%;
+  right: 0;
+}
+
+#filtrar img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.filtro {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 800px;
+  overflow-y: auto;
+  width: 300px;
+}
+
+#filtro-animais h1 {
+  text-align: center;
+  color: #ff66cc;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+#filtro-animais form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#limpar-filtros {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #a1f6da;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para os cards dos animais */
+.card-animal {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+.card-animal:hover {
+  transform: translateY(-5px);
+}
+
+.card-animal img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.info-animal h3 {
+  color: #333;
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.info-animal p {
+  color: #666;
+  margin: 5px 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.btn-remover {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.btn-remover:hover {
+  background-color: #ff3742;
+}
+
+#animais {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#botao-limpar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #a1f6da;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
