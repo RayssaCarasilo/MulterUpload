@@ -9,13 +9,32 @@ Passo a passo para implementar um sistema de upload de imagens em um site utiliz
 ### 1. Configurações iniciais e criação do cluster
 
 * Clone o repositório base para o Visual Studio Code.
-* Em seguida, execute o comando no terminal:
+* Em seguida, para fazer a instalação das dependências, execute os comandos no terminal:
     ```
-    npm install
+    npm i dotenv express mongoose multer
     ```
+
+    ```
+    npm i -D nodemon
+    ```
+
+    ```
+    npm i -g nodemon
+    ```
+
 * Crie um cluster do MongoDb (utilizamos o [Atlas](https://www.freecodecamp.org/news/get-started-with-mongodb-atlas)).
-* Renomeie o arquivo `sample.env` para `.env`.
-* Mude as variáveis de ambiente DB_USER e DB_PASS de acordo com o usuário e a senha do cluster previamente criado.
+* Acesse o arquivo `.env` e altere as variáveis de ambiente DB_USER e DB_PASS de acordo com o usuário e a senha do cluster previamente criado.
+
+    ```
+    DB_USER = seuuser
+    DB_PASS = suasenha
+    ```
+
+* Por fim, crie uma pasta uploads na raiz do diretório. Você pode fazer isso inserindo este comando no terminal:
+
+    ```
+    mkdir uploads
+    ```
 
 ### 2. Inserção da URI do Cluster
 
@@ -35,11 +54,6 @@ Passo a passo para implementar um sistema de upload de imagens em um site utiliz
     mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}resto da URI`)
     ```
 
-* Execute o seguinte comando no terminal e acesse o endereço `localhost:4000` pelo navegador:
-
-    ```
-    npm run start
-    ```
 
 ### 3. Upload de imagens
 
@@ -57,13 +71,13 @@ Passo a passo para implementar um sistema de upload de imagens em um site utiliz
     ```
 
 * Descomente a seção e ajuste o código conforme seja pedido.
-* Na primeira função callback para `destination`, insira:
+* Na primeira função callback, para `destination`, insira:
 
     ```js
     cb(null, "uploads/");
     ```
 
-* Na segunda função callback para `filename`, insira:
+* Na segunda função callback, para `filename`, insira:
 
     ```js
     cb(null, Date.now() + path.extname(file.originalname));
@@ -111,7 +125,7 @@ Passo a passo para implementar um sistema de upload de imagens em um site utiliz
 
 ### 5. Teste do site
 
-* Novamente, execute o comando no terminal e acesse o endereço `localhost:4000` pelo navegador:
+* Execute o comando no terminal e acesse o endereço `localhost:4000` pelo navegador:
 
     ```
     npm run start
@@ -120,4 +134,4 @@ Passo a passo para implementar um sistema de upload de imagens em um site utiliz
 * Teste o site e aproveite!
 * (Mediante quaisquer dúvidas, não se esqueça de perguntar!)
 
-
+ 
